@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors()); //Restrict cors origin requests
 
+// Routes
+app.use('/users', require('./routers/UserRouter'));
+
 mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
