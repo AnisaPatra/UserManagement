@@ -11,6 +11,7 @@ const App = () => {
         <Switch>
           <Route exact path='/users' component={UserListPage} />
           <Route exact path='/users/:username' component={UserDetailsPage} />
+          <Route exact path='/users/new' component={UserFormPage} />
         </Switch>
       </div>
     </Router>
